@@ -1,0 +1,16 @@
+[DEBUG] Tensor(const Shape&)
+[DEBUG] Tensor(const Shape&)
+[DEBUG] Tensor(const Shape&)
+[DEBUG] Tensor(const Shape&)
+[DEBUG] Tensor(const Shape&)
+[DEBUG] Tensor(const Shape&)
+[DEBUG] ~Tensor()
+[DEBUG] ~Tensor()
+[DEBUG] ~Tensor()
+[[0.000000, 0.000000, 0.000000],
+ [0.000000, 0.000000, 0.000000],
+ [0.000000, 0.000000, 0.000000]]
+[[0.000000, 0.000000, 0.000000],
+ [0.000000, 0.000000, 0.000000],
+ [0.000000, 0.000000, 0.000000]]
+[DEBUG] ~Tensor()
