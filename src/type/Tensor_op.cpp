@@ -26,14 +26,14 @@ Tensor& Tensor::operator=(const Tensor &tensor)
     }
 
     size_t N = tensor.shape[0] * tensor.stride;
-    data = (data_t*)realloc(data, N * sizeof(data_t));
+    data = (data_t*)Memory::Pool::realloc(data, N * sizeof(data_t));
     if (!data) {
         perror("Tensor");
         exit(1);
     }
 
     shape = tensor.shape;
-    calloc_data();
+    //calloc_data();
 
     for (int i=0; i<N; ++i) {
         data[i] = tensor.data[i];

@@ -58,14 +58,14 @@ Shape::~Shape()
 
     dim = 0;
     if (elems) {
-        free(elems);
+        Memory::Pool::free(elems);
     }
     elems = nullptr;
 }
 
 void Shape::calloc_elems()
 {
-    elems = (size_t*)calloc(dim, sizeof(size_t));
+    elems = (size_t*)Memory::Pool::calloc(dim, sizeof(size_t));
     if (elems == nullptr) {
         perror("Shape");
         exit(1);

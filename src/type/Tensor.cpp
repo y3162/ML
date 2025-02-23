@@ -70,14 +70,14 @@ Tensor::~Tensor()
     shape = Shape(1, 0);
 
     if (!data) {
-        free(data);
+        Memory::Pool::free(data);
         data = nullptr;
     }
 }
 
 void Tensor::calloc_data()
 {
-    data = (data_t*)calloc(shape[0] * stride, sizeof(data_t));
+    data = (data_t*)Memory::Pool::calloc(shape[0] * stride, sizeof(data_t));
     if (!data) {
         perror("Tensor");
         exit(1);

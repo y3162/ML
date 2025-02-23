@@ -14,7 +14,7 @@ Shape& Shape::operator=(const Shape &shape)
     }
 
     if (elems != nullptr) {
-        free(elems);
+        Memory::Pool::free(elems);
     }
 
     dim = shape.dim;
@@ -33,7 +33,7 @@ Shape& Shape::operator=(Shape&& shape) noexcept
     }
 
     if (elems) {
-        free(elems);
+        Memory::Pool::free(elems);
     }
 
     dim = std::exchange(shape.dim, 0);
